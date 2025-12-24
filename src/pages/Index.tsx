@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import BookingDialog from "@/components/BookingDialog";
 
 const Index = () => {
   const services = [
@@ -109,9 +110,11 @@ const Index = () => {
               <p className="text-xs text-muted-foreground">Жулебино, Москва</p>
             </div>
           </div>
-          <Button className="font-heading">
-            Записаться на консультацию
-          </Button>
+          <BookingDialog>
+            <Button className="font-heading">
+              Записаться на консультацию
+            </Button>
+          </BookingDialog>
         </div>
       </header>
 
@@ -131,13 +134,17 @@ const Index = () => {
                 логопедии и АВА-терапии. Индивидуальный подход к каждому ребенку.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="font-heading text-base">
-                  <Icon name="Calendar" size={18} className="mr-2" />
-                  Записаться на прием
-                </Button>
-                <Button size="lg" variant="outline" className="font-heading text-base">
-                  <Icon name="Phone" size={18} className="mr-2" />
-                  Позвонить нам
+                <BookingDialog>
+                  <Button size="lg" className="font-heading text-base">
+                    <Icon name="Calendar" size={18} className="mr-2" />
+                    Записаться на прием
+                  </Button>
+                </BookingDialog>
+                <Button size="lg" variant="outline" className="font-heading text-base" asChild>
+                  <a href="tel:+74951234567">
+                    <Icon name="Phone" size={18} className="mr-2" />
+                    Позвонить нам
+                  </a>
                 </Button>
               </div>
               <div className="mt-8 flex items-center gap-6">
@@ -317,13 +324,17 @@ const Index = () => {
             <p className="text-sm opacity-80 mt-1">На основе реальных отзывов клиентов</p>
           </div>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="font-heading text-base">
-              <Icon name="Map" size={18} className="mr-2" />
-              Посмотреть на карте
+            <Button size="lg" variant="secondary" className="font-heading text-base" asChild>
+              <a href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer">
+                <Icon name="Map" size={18} className="mr-2" />
+                Посмотреть на карте
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="font-heading text-base border-white text-white hover:bg-white hover:text-primary">
-              <Icon name="Phone" size={18} className="mr-2" />
-              +7 (495) 123-45-67
+            <Button size="lg" variant="outline" className="font-heading text-base border-white text-white hover:bg-white hover:text-primary" asChild>
+              <a href="tel:+74951234567">
+                <Icon name="Phone" size={18} className="mr-2" />
+                +7 (495) 123-45-67
+              </a>
             </Button>
           </div>
         </div>
