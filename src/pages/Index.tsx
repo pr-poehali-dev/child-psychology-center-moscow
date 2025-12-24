@@ -212,6 +212,90 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-secondary/10">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <Badge className="mb-4 font-heading bg-secondary text-secondary-foreground">
+              О центре
+            </Badge>
+            <h3 className="text-4xl font-heading font-bold mb-4 text-foreground">
+              Помогаем детям развиваться с 2015 года
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Наш центр создан родителями для родителей, которые столкнулись с особенностями развития своих детей
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 animate-fade-in-up">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Target" className="text-primary" size={28} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-heading font-bold mb-3 text-foreground">
+                      Наша миссия
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Создать пространство, где каждый ребенок получает индивидуальную помощь специалистов 
+                      высшей квалификации. Мы верим, что каждый ребенок уникален и способен достичь успеха 
+                      при правильной поддержке.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-secondary/20 hover:border-secondary/40 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Lightbulb" className="text-secondary" size={28} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-heading font-bold mb-3 text-foreground">
+                      Наш подход
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Используем научно доказанные методики: нейропсихологическую коррекцию, АВА-терапию, 
+                      логопедические технологии. Работаем в команде специалистов для комплексного развития ребенка.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 animate-scale-in" style={{ animationDelay: "200ms" }}>
+            <Card className="text-center bg-white hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="text-4xl font-heading font-bold text-primary mb-2">9+</div>
+                <p className="text-sm text-muted-foreground">Лет успешной работы</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center bg-white hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="text-4xl font-heading font-bold text-primary mb-2">500+</div>
+                <p className="text-sm text-muted-foreground">Семей нам доверяют</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center bg-white hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="text-4xl font-heading font-bold text-primary mb-2">12</div>
+                <p className="text-sm text-muted-foreground">Специалистов в команде</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center bg-white hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="text-4xl font-heading font-bold text-primary mb-2">10+</div>
+                <p className="text-sm text-muted-foreground">Направлений работы</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gradient-to-br from-accent/30 to-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in-up">
@@ -233,7 +317,7 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4" />
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-4" />
                   <h4 className="text-xl font-heading font-bold mb-1 text-foreground">
                     {specialist.name}
                   </h4>
